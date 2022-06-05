@@ -1,6 +1,6 @@
 {
   "name": "xfrakpublicapi",
-  "version": "publicapi-11.2.1",
+  "version": "public-11.2.1",
   "description": "API Publica de xFrak",
   "main": "./source/main.js",
   "type": "commonjs",

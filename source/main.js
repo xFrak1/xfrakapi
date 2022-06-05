@@ -9,6 +9,8 @@ const application = express();
     require(`./handlers/${handler}`)(application);
 });
 
+application.use(express.static(__dirname + '/webpage'))
+
 // Exportación dela aplicación
 module.exports = {
     application
