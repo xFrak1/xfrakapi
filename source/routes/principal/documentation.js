@@ -6,10 +6,12 @@ const express = require("express")();
  */
 
 // Exportación del inicio de la pagina web
-module.exports = (application) => {
-    application.get("/api/docs", (req, res) => {
+module.exports = {
+    url: '/api/docs',
+    method: 'get',
+    run(application, req, res)  {
         res.sendFile("documentation.html", {
             root: "source/webpage/"
-        })
-    })
+        });
+    }
 }

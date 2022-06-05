@@ -3,7 +3,6 @@
   "version": "public-11.2.1",
   "description": "API Publica de xFrak",
   "main": "./source/main.js",
-  "type": "commonjs",
   "keywords": [
     "restapi"
   ],
