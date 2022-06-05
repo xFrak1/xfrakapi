@@ -10,14 +10,15 @@ const math = require("math-expression-evaluator");
 
 // Exportación del endpoint "ASCII"
 module.exports = {
-    url: '/calculator/:operation',
+    url: '/api/calculator(/:operation)?',
     method: 'get',
     run(application, req, res) {
-        const operation = req.params.operation;
+        let operation = req.params.operation;
+        if (!operation) return res.status(400).json({ error: "Debes escribir un cálculo." });
         try {
             res.json({ operation: operation, result: math.eval(operation) });
         } catch(error) {
-            res.sendStatus(400).json({ error: error });
+            res.status(400).json({ error: error });
         }
     }
 }

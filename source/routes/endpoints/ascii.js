@@ -10,10 +10,11 @@ const ascii = require("ascii-art");
 
 // Exportación del endpoint "ASCII"
 module.exports = {
-    url: '/api/ascii/:text',
+    url: '/api/ascii(/:text)?',
     method: 'get',
     run(application, req, res) {
-        const text = req.params.text;
+        let text = req.params.text;
+        if (!text) return res.status(400).json({ error: "Debes incluir un texto." });
         ascii.font(text, "Doom", (err, result) => {
             if (err) {
                 return res.sendStatus(400).json({ error: err });
