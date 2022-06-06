@@ -1,6 +1,7 @@
 const math = require("math-expression-evaluator");
+const { App } = require("../../controllers/appdef");
 
-module.exports = {
+module.exports = new App({
     url: "/api/calculator(/:operation)?",
     method: "get",
     run(application, req, res) {
@@ -12,4 +13,4 @@ module.exports = {
             res.status(400).json({ error: error });
         }
     }
-}
+})

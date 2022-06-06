@@ -1,6 +1,7 @@
 const axios = require("axios").default;
+const { App } = require("../../controllers/appdef");
 
-module.exports = {
+module.exports = new App({
     url: "/api/shortener(/:url)?",
     method: "get",
     async run(application, req, res) {
@@ -16,4 +17,4 @@ module.exports = {
             })
         }
     }
-}
+})
