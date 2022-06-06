@@ -1,9 +1,7 @@
-const { App } = require("../../controllers/appdef");
-
-module.exports = new App({
+module.exports = {
     url: "/",
     method: "get",
     run(application, req, res) {
         res.redirect("/api/");
     }
-})
+}

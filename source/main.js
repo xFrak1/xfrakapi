@@ -4,6 +4,7 @@ const express = require("express");
 // Uso de Express para la Aplicación
 const application = express();
 
+// Uso de los archivos para la pagina web
 application.use(express.static(__dirname + '/webpage'))
 
 // Exportación de la aplicación

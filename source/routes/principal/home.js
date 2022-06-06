@@ -1,6 +1,4 @@
-const { App } = require("../../controllers/appdef");
-
-module.exports = new App({
+module.exports = {
     url: "/api/",
     method: "get",
     run(application, req, res) {
@@ -8,4 +6,4 @@ module.exports = new App({
             root: "source/webpage/"
         });
     }
-})
+}

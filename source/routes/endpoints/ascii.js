@@ -1,7 +1,6 @@
 const ascii = require("ascii-art");
-const { App } = require("../../controllers/appdef");
 
-module.exports = new App({
+module.exports = {
     url: "/api/ascii(%3Ftext=:text)?",
     method: "get",
     run(application, req, res) {
@@ -15,4 +14,4 @@ module.exports = new App({
             } else res.json({ result: result });
         });
     }
-})
+}
