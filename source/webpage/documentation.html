@@ -4,7 +4,7 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width">
         <link href="/style.css" rel="stylesheet" type="text/css" />
-      <link rel="shortcut icon" href="/assets/thumbnail.png">
+        <link rel="shortcut icon" href="/assets/thumbnail.png">
         <title>xFrak Public API | Documentación</title>
     </head>
 
@@ -12,16 +12,22 @@
         <h1>xFrak Public API | Documentación</h1>
         <h2>Endpoints:</h2>
 
-        <h3><a href="https://xfrakpublicapi.ml/api/ascii/hello">/api/ascii</a></h3>
+        <h3><a href="https://xfrakpublicapi.ml/api/ascii?text=Hello world!">/api/ascii</a></h3>
         <p>
-          Convierte texto a ASCII.<br>
-          <b>Uso: /api/ascii/{texto}</b>
+            Convierte texto a ASCII.<br>
+            <b>Uso: /api/ascii?text={texto}</b>
         </p>
       
-        <h3><a href="https://xfrakpublicapi.ml/api/calculator/2 + 2">/api/calculator</a></h3>
-          <p>
+        <h3><a href="https://xfrakpublicapi.ml/api/calculator?calculation=2+2">/api/math</a></h3>
+        <p>
             Resuelve cálculos matemáticos.<br>
-            <b>Uso: /api/calculator/{cálculo}</b>
+            <b>Uso: /api/calculator?calculation={cálculo}</b>
+        </p>
+        
+        <h3><a href="https://xfrakpublicapi.ml/api/shortener?url=https://youtube.com/watch?v=dQw4w9WgXcQ</h3"></a>
+        <p>
+            Acorta una URL.<br>
+            <b>Uso: /api/shortener?url={url}</b>
         </p>
       
     </body>
